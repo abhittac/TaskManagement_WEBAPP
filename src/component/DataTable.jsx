@@ -63,12 +63,12 @@ const DataTable = () => {
               <td className="px-4 py-2">{item.title}</td>
               <td className="text-right">
                 <div className="flex items-center justify-center space-x-4">
-                  <button
+                  {/* <button
                     onClick={() => handleEdit(item)}
                     className="px-4 py-2 bg-blue-500 text-white rounded"
                   >
                     Edit
-                  </button>
+                  </button> */}
                   <DeleteData render={render} setRender={setRender} id={item.id} />
                 </div>
               </td>
