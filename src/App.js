@@ -1,12 +1,9 @@
-import logo from './logo.svg';
 import './App.css';
-import Title from './component/Title';
-import DataTable from './component/DataTable';
 import { useState } from 'react';
-import { createContext } from 'react';
 import Main from './page/Main'
-import  {TaskContext} from './statemanagement/CreateContext'
-import CommonModalLoader from './component/CommonModalLoader';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import  {TaskContext} from './context/CreateContext'
+import Login from './page/Login';
 function App() {
   const [render,setRender]=useState(false)
   
@@ -15,7 +12,12 @@ function App() {
     <div className="App">
       <header className="App-header">
         <TaskContext.Provider value={{render,setRender}}>
-          <Main/>
+        <Router>
+      <Routes>
+        <Route path="/" element={<Login />} />
+        <Route path="/dashboard" element={<Main />} />
+      </Routes>
+    </Router>
   
       </TaskContext.Provider>
 

@@ -1,8 +1,7 @@
 import React from 'react';
-import { getFirestore, doc, deleteDoc, } from 'firebase/firestore';
-import { app } from '../firebase'; // Import the Firebase app instance
+import {  doc, deleteDoc, } from 'firebase/firestore';
 import { db } from '../firebase';
-import { set } from 'firebase/database';
+
 
 
 const DeleteData = ({id,setRender,render}) => {

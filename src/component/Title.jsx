@@ -1,8 +1,8 @@
 import { addDoc ,collection} from 'firebase/firestore';
 import { db } from '../firebase';
 import React, { useContext } from 'react'
-import { TaskContext } from '../statemanagement/CreateContext';
-export default function task() {
+import { TaskContext } from '../context/CreateContext';
+export default function Title(){
   
     const {render,setRender,task,setTask}=useContext(TaskContext)
     const handleSubmit=async (e)=>{

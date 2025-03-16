@@ -2,13 +2,13 @@ import React, { useContext, useEffect, useState } from 'react';
 import { collection, getDocs, doc, updateDoc } from 'firebase/firestore';
 import { db } from '../firebase';
 import DeleteData from './DeleteData';
-import { TaskContext } from '../statemanagement/CreateContext';
+import { TaskContext } from '../context/CreateContext';
 import EditTaskModal from './EditTaskModal';
 
 const DataTable = () => {
   const [data, setData] = useState([]);
   const [isOpen, setIsOpen] = useState(false);
-  const { render, setRender, task, setTask } = useContext(TaskContext);
+  const { render, setRender, task,  } = useContext(TaskContext);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -24,10 +24,10 @@ const DataTable = () => {
     fetchData();
   }, [render]);
 
-  const handleEdit = (item) => {
-    setTask(item);
-    setIsOpen(true);
-  };
+  // const handleEdit = (item) => {
+  //   setTask(item);
+  //   setIsOpen(true);
+  // };
 
   const handleSave = async (updatedTask) => {
     const taskRef = doc(db, "task", updatedTask.id);

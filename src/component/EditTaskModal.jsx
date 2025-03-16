@@ -13,9 +13,9 @@ const EditTaskModal = ({ isOpen, onClose, onSave }) => {
           <label className="block text-sm font-medium text-gray-700">Title</label>
           <input
             type="text"
-            value={title}
+            // value={title}
             required
-            onChange={(e) => setTitle(e.target.value)}
+            // onChange={(e) => setTitle(e.target.value)}
             className="w-full p-2 border rounded mt-1"
           />
         </div>
@@ -30,7 +30,7 @@ const EditTaskModal = ({ isOpen, onClose, onSave }) => {
           </button>
           <button
             type="button"
-            onClick={handleSave}
+            // onClick={handleSave}
             className="px-4 py-2 bg-green-500 text-white rounded"
           >
             Save

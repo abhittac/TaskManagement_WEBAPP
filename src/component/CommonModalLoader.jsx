@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Dialog, DialogContent, CircularProgress, Typography } from '@mui/material';
+import { Dialog, DialogContent, CircularProgress, } from '@mui/material';
 
 const CommonModalLoader = ({ open=true , message = 'Loading...' }) => {
   return (
